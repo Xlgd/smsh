@@ -1,3 +1,5 @@
+/* redirect.c-code for deal with the IO redirection*/
+
 #include <fcntl.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -6,6 +8,11 @@
 
 
 void redirect(char *reoutfile, char *reinfile) {
+    /* 
+     * purpose: redirecting input and output
+     * errors: If the dup2 function cannot be called properly, an error occurs
+     * details: use dup2 to redirect 
+     */
     int outfd;
     int newoutfd;
     int infd;

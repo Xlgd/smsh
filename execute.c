@@ -12,7 +12,7 @@ void redirect(char *, char *);
 
 int execute(char * argv[], char *out, char *in, char * command2[]) {
     /* 
-     * purpose: run a program passing it arguments
+     * purpose: run a program passing it arguments(sometimes with redirect and pipe)
      * returns: status returned via wait, or -1 on error
      * errors: -1 on fork() or wait() errors
      */
